@@ -1,0 +1,387 @@
+/* =========================================
+   style.css - Web Programming 1
+   Full CSS Baseline + CRUD Styles
+   ========================================= */
+
+/* --- Reset & Base --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background-color: #dbe7f6;
+    padding: 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid #b8c7d9;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: #ffffff;
+    padding: 12px 5%;
+    border-bottom: 1px solid #dddddd;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 6px;
+    color: #1f4e79;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    border-color: #1f4e79;
+}
+
+/* --- Main Content --- */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 24px auto;
+}
+
+/* --- Section & Card --- */
+section,
+.card {
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+section h2,
+.card h2 {
+    margin-top: 0;
+}
+
+/* --- Profile Photo --- */
+.profile-photo {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    padding: 4px;
+    margin: 0 auto 18px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* --- Styling Data Table --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #eeeeee;
+}
+
+/* --- Alert Messages --- */
+.alert-sukses {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #2e7d32;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* --- Form Mahasiswa --- */
+.student-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 24px auto;
+    padding: 24px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+.student-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.student-form input {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #aaaaaa;
+    box-sizing: border-box;
+}
+
+.student-form button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #333333;
+    cursor: pointer;
+}
+
+/* --- Layout Lab Demo --- */
+.layout-demo {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.box {
+    padding: 20px;
+    border: 2px solid #1f4e79;
+    text-align: center;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.box-margin  { margin: 10px; background-color: #e3f2fd; }
+.box-padding { padding: 30px; background-color: #f3e5f5; }
+.box-border  { border: 6px solid #1f4e79; background-color: #e8f5e9; }
+
+.demo-link {
+    display: inline-block;
+    padding: 10px 14px;
+    margin: 4px;
+    border: 1px solid #999999;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #dbe7f6;
+    padding: 20px;
+    margin-top: 32px;
+    text-align: center;
+    border-top: 1px solid #b8c7d9;
+}
+
+/* --- Code snippet --- */
+code {
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+/* --- Login Page Styles --- */
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.login-card label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #1f4e79;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.message {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 16px;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+/* =========================================
+   Step 6 - Tambahkan CSS di bagian bawah assets/css/style.css
+   ========================================= */
+
+.crud-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.crud-toolbar input {
+    width: min(100%, 360px);
+    padding: 10px 12px;
+}
+
+.crud-toolbar .btn,
+a.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.crud-toolbar .btn:hover,
+a.btn:hover {
+    background-color: #153755;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.actions a {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f3f4f6;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    color: #1f4e79;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.actions a:hover {
+    background-color: #e2e8f0;
+}
+
+.delete-form {
+    display: inline;
+    margin: 0;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+.crud-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 24px auto;
+    padding: 24px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+}
+
+.crud-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.crud-form input {
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.crud-form button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #333333;
+    background: #1f4e79;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.crud-form a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #1f4e79;
+    text-decoration: none;
+}
+
+.form-error {
+    display: block;
+    min-height: 18px;
+    margin: 4px 0 10px;
+    color: #b91c1c;
+    font-size: 0.85em;
+}
+
+.is-invalid {
+    border: 2px solid #b91c1c;
+}
+
+@media (max-width: 768px) {
+    .crud-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .crud-toolbar input {
+        width: 100%;
+    }
+}
+
