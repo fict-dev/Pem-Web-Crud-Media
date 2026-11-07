@@ -28,6 +28,7 @@ $result = $conn->query($sql);
     <a href="../pages/data_mahasiswa.php">Data Mahasiswa</a>
     <a href="../pages/form_mahasiswa.php">Tambah Mahasiswa</a>
     <a href="index.php">CRUD Mahasiswa</a>
+    <a href="../crud-media/index.php">CRUD Media</a>
     <a href="../proses/logout.php">Logout</a>
 </nav>
 

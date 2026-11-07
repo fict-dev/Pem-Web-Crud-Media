@@ -1,4 +1,4 @@
-﻿-- MySQL dump 10.13  Distrib 8.4.3, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.4.3, for Win64 (x86_64)
 --
 -- Host: localhost    Database: web_programming_1
 -- ------------------------------------------------------
@@ -28,6 +28,9 @@ CREATE TABLE `mahasiswa` (
   `nama` varchar(100) NOT NULL,
   `program_studi` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `audio` varchar(255) DEFAULT NULL,
+  `dokumen` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +41,7 @@ CREATE TABLE `mahasiswa` (
 
 LOCK TABLES `mahasiswa` WRITE;
 /*!40000 ALTER TABLE `mahasiswa` DISABLE KEYS */;
-INSERT INTO `mahasiswa` VALUES (1,'230001','Dardi','Informatika','Dardi@email.com'),(2,'230002','Budi','Sistem Informasi','budi@email.com'),(3,'230003','Citra','Informatika','citra@email.com'),(4,'4112755201250006','Rasyadan Rizky Firdaus','Informatika','Rasyadan@gmail.com'),(5,'4112755201250006','rasyaedan','Informatika','rasyadan.firdaus.fict@krw.horizon.ac.id');
+INSERT INTO `mahasiswa` VALUES (1,'230001','Dardi','Informatika','Dardi@email.com',NULL,NULL,NULL),(2,'230002','Budi','Sistem Informasi','budi@email.com',NULL,NULL,NULL),(3,'230003','Citra','Informatika','citra@email.com',NULL,NULL,NULL),(4,'4112755201250006','Rasyadan Rizky Firdaus','Informatika','rasyadan.firdaus.fict@krw.horizon.ac.id',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `mahasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
 

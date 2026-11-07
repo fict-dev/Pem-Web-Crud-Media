@@ -22,6 +22,7 @@ require_once "../config/auth.php";
     <a href="data_mahasiswa.php">Data Mahasiswa</a>
     <a href="form_mahasiswa.php">Tambah Mahasiswa</a>
     <a href="../crud/index.php">CRUD Mahasiswa</a>
+    <a href="../crud-media/index.php">CRUD Media</a>
     <a href="../proses/logout.php">Logout</a>
 </nav>
 
@@ -35,6 +36,7 @@ require_once "../config/auth.php";
             <li><a href="data_mahasiswa.php">Data Mahasiswa - hasil Modul 3B</a></li>
             <li><a href="form_mahasiswa.php">Tambah Mahasiswa - hasil Modul 4B</a></li>
             <li><a href="../crud/index.php">CRUD Mahasiswa - hasil Modul Sesi 9</a></li>
+            <li><a href="../crud-media/index.php">CRUD Media - hasil Modul 10</a></li>
         </ul>
     </section>
 </main>
